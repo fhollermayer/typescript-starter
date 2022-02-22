@@ -1,8 +1,12 @@
 # Minimal Typescript Boilerplate
 
-If you are in fact here to use this code, go ahead and just clone the repository.
+If you are in fact here to use this code, go ahead and just clone the repository into an existing directory.
 
+```shell
+> npx degit fhollermayer/minimal-typescript-boilerplate
+```
 
+## Motivation 
 As a programmer, coming from a language like C# or Java, you are most probably used to a workflow as simple as *Start favorite IDE*, *New Project* to run whatever your heart desires. With Typescript or even vanilla JavaScript, that is most often not the case. All the options for pre-compilers, unit-testing frameworks, bundlers, and so on keep you from simply executing a file. More than once, I found myself using https://www.typescriptlang.org/play or https://codesandbox.io/ instead of investing 30 minutes in setting up a simple boilerplate. I finally did it!
 
 ## Prerequisites
@@ -10,8 +14,8 @@ As a programmer, coming from a language like C# or Java, you are most probably u
 ### git
 Even in the most basic application, I find myself in need of some version management. In most cases The file history and `Ctrl + Z` is enough, but from time to time, I wish I just would've persisted the last working state: [Add](https://git-scm.com/docs/git-add) everything not excluded via [.gitignore](https://git-scm.com/docs/gitignore) and [commit](https://git-scm.com/docs/git-commit).
 
-```bash
-    git add . && git commit -m "no message"
+```shell
+> git add . && git commit -m "no message"
 ```
 
 
