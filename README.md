@@ -3,7 +3,7 @@
 If you are in fact here to use this code, go ahead and just clone the repository into an existing directory.
 
 ```shell
-> npx degit fhollermayer/minimal-typescript-boilerplate
+npx degit fhollermayer/minimal-typescript-boilerplate
 ```
 
 ## Motivation 
@@ -15,7 +15,7 @@ As a programmer, coming from a language like C# or Java, you are most probably u
 Even in the most basic application, I find myself in need of some version management. In most cases The file history and `Ctrl + Z` is enough, but from time to time, I wish I just would've persisted the last working state: [Add](https://git-scm.com/docs/git-add) everything not excluded via [.gitignore](https://git-scm.com/docs/gitignore) and [commit](https://git-scm.com/docs/git-commit).
 
 ```shell
-> git add . && git commit -m "no message"
+git add . && git commit -m "no message"
 ```
 
 
@@ -42,8 +42,7 @@ If you are on Windows, Powershell is ofc the superior console, but the internet 
 
 
 ```shell
-> git init
-> npm init
+git init && npm init
 ```
 
 Create a `.gitignore`
@@ -55,8 +54,7 @@ node_modules
 Stage everything and commit the current state
 
 ```shell
-> git add .
-> git commit -m "initializes project"
+git add . && git commit -m "initializes project"
 ```
 
 </details>
@@ -66,8 +64,10 @@ Stage everything and commit the current state
 
 
 ```shell
-> npm i -D typescript
-> ./node_modules/.bin/tsc --init
+npm i -D typescript
+```
+```shell
+./node_modules/.bin/tsc --init
 ```
 
 Create src/index.ts
@@ -79,15 +79,19 @@ console.log("It's working!");
 You may check if the typescript compiler is working as expected by compiling and executing. Clean up after that.
 
 ```shell
-> ./node_modules/.bin/tsc --build
-> node src/index.js
-> ./node_modules/.bin/tsc --build --clean
+./node_modules/.bin/tsc --build
+```
+```shell
+node src/index.js
+```
+```shell
+./node_modules/.bin/tsc --build --clean
 ```
 
 To get rid of the manual compiling step; Install ts-node, which does in on the fly.
 
 ```shell
-> npm i -D ts-node
+npm i -D ts-node
 ```
 
 Update tsconfig.json to use a base config (utilizing [@tsconfig/bases](https://github.com/tsconfig/bases))
@@ -119,12 +123,11 @@ Update package.json by adding a convenient entry point.
 Admire the convenience by using:
 
 ```shell
-> npm run start
+npm run start
 ```
 
 ```shell
-> git add .
-> git commit -m "adds typescript support"
+git add . && git commit -m "adds typescript support"
 ```
 
 ---
@@ -136,13 +139,13 @@ Admire the convenience by using:
 [`mocha`](https://mochajs.org/) is the test-runner of my choice and [`chai`](https://www.chaijs.com/) a compatible assertion library.
 
 ```shell
-> npm i -D mocha chai
+npm i -D mocha chai
 ```
 
 Both modules originate from the realm of javascript, so no typing in the module itself. [@types](https://github.com/DefinitelyTyped/DefinitelyTyped) provides corresponding definition files.
 
 ```shell
-> npm i -D @types/mocha @types/chai
+npm i -D @types/mocha @types/chai
 ```
 
 `mocha` does not search for typescript files out of the box. Create a [`.mocharc.json`](https://mochajs.org/#configuring-mocha-nodejs) and override the necessary properties to fix that.
@@ -181,7 +184,7 @@ main();
 Verify the test failure
 
 ```shell
-> ./node_modules/.bin/mocha
+./node_modules/.bin/mocha
 ```
 
 Fix the module
@@ -197,7 +200,7 @@ export function main() {
 Check you implementation
 
 ```shell
-> ./node_modules/.bin/mocha
+./node_modules/.bin/mocha
 ```
 
 Add a `test` script to `package.json`. (Inside the scripts-section `npm` will save you the effort to add a path-prefix to your executables by automatically searching in `./node_modules/.bin`.)
@@ -215,8 +218,7 @@ Update package.json
 ```
 
 ```shell
-git add .
-git commit -m "adds unit testing"
+git add . && git commit -m "adds unit testing"
 ```
 </details>
 
