@@ -3,7 +3,7 @@
 If you are in fact here to use this code, go ahead and just clone the repository into an existing directory.
 
 ```shell
-npx degit fhollermayer/minimal-typescript-boilerplate
+npx degit fhollermayer/typescript-starter
 ```
 
 ## Motivation 
@@ -64,7 +64,7 @@ git add . && git commit -m "initializes project"
 
 
 ```shell
-npm i -D typescript
+npm i -D typescript @types/node@16
 ```
 ```shell
 ./node_modules/.bin/tsc --init
